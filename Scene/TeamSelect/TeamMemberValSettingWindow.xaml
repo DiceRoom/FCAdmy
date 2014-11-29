@@ -1,0 +1,12 @@
+﻿<Window x:Class="FightingCommunityAdministrator.TeamMemberValSettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="人数設定" Height="94" Width="282" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Height="23" HorizontalAlignment="Left" Name="textBlock1" Text="１チームに振り分ける人数を指定してください" VerticalAlignment="Top" Margin="3,3,0,0" />
+        <Button Content="キャンセル" Height="23" HorizontalAlignment="Right" Margin="0,0,3,3" Name="CancelButton" VerticalAlignment="Bottom" Width="75" IsCancel="True" TabIndex="1" Click="_ClickCancelButton" />
+        <Button Content="決定" Height="23" HorizontalAlignment="Left" Margin="104,0,0,3" Name="DecideButton" VerticalAlignment="Bottom" Width="75" IsDefault="True" TabIndex="0" />
+        <TextBox Height="24" HorizontalAlignment="Left" Margin="17,23,0,0" Name="TeamValueTextBox" VerticalAlignment="Top" Width="46" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="68,26,0,0" Name="textBlock2" Text="人" VerticalAlignment="Top" Width="20" />
+    </Grid>
+</Window>

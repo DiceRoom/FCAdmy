@@ -1,0 +1,11 @@
+﻿<Window x:Class="FightingCommunityAdministrator.MemberSearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="メンバー検索" Height="150" Width="350" WindowStyle="ToolWindow" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" KeyDown="_ClickKey">
+    <Grid>
+        <ComboBox Height="24" HorizontalAlignment="Stretch" Margin="0,0,0,18" Name="CharacterIDComboBox" VerticalAlignment="Bottom" Width="320" />
+        <TextBox Height="23" HorizontalAlignment="Stretch" Margin="3,25,3,0" Name="MemberNameTextBox" VerticalAlignment="Top" Width="322" Text="ここに検索する名前を入れる" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Name="textBlock1" Text="メンバー名検索" VerticalAlignment="Top" Margin="5,5,0,0" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="5,0,0,38" Name="textBlock2" Text="キャラ検索" VerticalAlignment="Bottom" />
+    </Grid>
+</Window>

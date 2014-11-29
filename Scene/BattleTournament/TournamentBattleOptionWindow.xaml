@@ -1,0 +1,45 @@
+﻿<Window x:Class="FightingCommunityAdministrator.TournamentBattleOptionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="対戦オプションウィンドウ" Height="600" Width="440" WindowStyle="ToolWindow" ResizeMode="CanResize" Closing="_Closing" MinWidth="400">
+    <Grid Name="MainGrid">
+        <TabControl Name="MainTabControl" Margin="0,23,0,0" Foreground="#FF5C0707" BorderBrush="#FFFFB4B4">
+            <TabItem Header="対戦可能な組み合わせ" Name="VersusTab">
+                <Grid Margin="-2,-2,0,0">
+                    <ScrollViewer HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Name="BattleAbleDisplayScrollViewer" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalScrollBarVisibility="Hidden">
+                        <StackPanel Name="VersusDisplayStackPanel"></StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <TabItem Header="対戦結果" Name="ResultTab" Width="100">
+                <Grid>
+                    <ScrollViewer HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Name="ResultDisplayScrollViewer" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+                        <StackPanel Name="ResultDisplayStackPanel" />
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <TabControl.Background>
+                <ImageBrush ImageSource="/FightingCommunityAdministrator;component/Resource/背景.png" Stretch="None" TileMode="FlipXY" Viewport="0,0,793.900753825047,573.92825276521" ViewportUnits="Absolute" />
+            </TabControl.Background>
+        </TabControl>
+        <Menu Height="23" HorizontalAlignment="Stretch" Name="OptionMenu" VerticalAlignment="Top">
+            <MenuItem Header="画像出力">
+                <MenuItem Header="画像出力フォルダを開く" Name="OpenScreenShotFolderItem" Click="_OpenScreenShotFolder" />
+                <Separator />
+                <MenuItem Header="チーム表" Name="TeamListItem" TabIndex="0" Click="_ClickCreateScreenShot" />
+                <MenuItem Header="トーナメント表" Name="TournamentItem" TabIndex="1" Click="_ClickCreateScreenShot" />
+                <MenuItem Header="チーム表+トーナメント表" Name="ConnectImageItem" TabIndex="2" Click="_ClickCreateScreenShot" />
+            </MenuItem>
+            <MenuItem Header="連携" Name="UploadItem">
+                <MenuItem Header="大会情報画像をアップロードする" Name="UploadScreenShotItem">
+                    <MenuItem Header="チーム表" Name="UploadTeamListItem" TabIndex="0" Click="_ClickUploadScreenShot" />
+                    <MenuItem Header="トーナメント表" Name="UploadTournamentItem" TabIndex="1" Click="_ClickUploadScreenShot" />
+                    <MenuItem Header="チーム表+トーナメント表" Name="UploadConnectImageItem" TabIndex="2" Click="_ClickUploadScreenShot" />
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="その他">
+                <MenuItem Header="大会を中止する" Name="CancelTournamentItem" />
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>

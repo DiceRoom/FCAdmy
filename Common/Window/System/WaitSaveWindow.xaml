@@ -1,0 +1,14 @@
+﻿<Window x:Class="FightingCommunityAdministrator.WaitSaveWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="" Height="83" Width="351" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowStyle="None" Topmost="False" ShowInTaskbar="False">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+            <GradientStop Color="#FFF8FFFC" Offset="0" />
+            <GradientStop Color="#FFF28260" Offset="1" />
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Label Content="オートセーブメッセージ" HorizontalAlignment="Stretch" Name="MessageLabel" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" FontWeight="Normal" />
+    </Grid>
+</Window>

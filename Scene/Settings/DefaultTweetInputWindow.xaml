@@ -1,0 +1,18 @@
+﻿<Window x:Class="FightingCommunityAdministrator.DefaultTweetInputWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="デフォルトのツイート情報を入力してください" Height="300" Width="490" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize">
+    <Grid>
+        <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,0,3,3" Name="CancelButton" VerticalAlignment="Bottom" Width="75" Click="_ClickOKButton" TabIndex="1" />
+        <Button Content="OK" Height="23" HorizontalAlignment="Right" Margin="0,0,80,3" Name="OKButton" VerticalAlignment="Bottom" Width="75" Click="_ClickOKButton" TabIndex="0" />
+        <TextBlock Height="21" HorizontalAlignment="Right" Margin="0,215,5,0" Name="CharaLengthTextBlock" Text="～文字のツイートになります" VerticalAlignment="Top" FontSize="14" TextAlignment="Right" FontWeight="Bold" Foreground="#FF4B4BFF" Width="317" />
+        <Button Content="大会日時" Height="23" HorizontalAlignment="Left" Margin="73,1,0,0" Name="TournamentDataButton" VerticalAlignment="Top" Width="70" TabIndex="1" Click="_ClickInsertTextButton" />
+        <Button Content="大会名" Height="23" HorizontalAlignment="Left" Name="TournamentNameButton" VerticalAlignment="Top" Width="70" Margin="1,1,0,0" TabIndex="0" Click="_ClickInsertTextButton" />
+        <Button Content="大会時間" Height="23" HorizontalAlignment="Left" Margin="217,1,0,0" Name="TournamentTimeButton" VerticalAlignment="Top" Width="70" TabIndex="3" Click="_ClickInsertTextButton" />
+        <Button Content="大会日" Height="23" HorizontalAlignment="Left" Margin="145,1,0,0" Name="TournamentDayButton" VerticalAlignment="Top" Width="70" TabIndex="2" Click="_ClickInsertTextButton" />
+        <Button Content="添付画像URL" Height="23" HorizontalAlignment="Left" Margin="289,1,0,0" Name="ImageButton" VerticalAlignment="Top" Width="80" TabIndex="4" Click="_ClickInsertTextButton" />
+        <Button Content="プレビュー" Height="23" HorizontalAlignment="Right" Margin="0,0,157,3" Name="PreviewButton" VerticalAlignment="Bottom" Width="75" Click="_ClickTweetPreview" />
+        <TextBox Height="190" HorizontalAlignment="Stretch" Margin="0,25,0,0" Name="TweetTextBox" VerticalAlignment="Top" SelectionChanged="_ChangeSelection" TextChanged="_ChangeText" AcceptsReturn="True" />
+        <Button Content="デフォルトに戻す" Height="23" HorizontalAlignment="Left" Margin="0,215,0,0" Name="DefaultReturnButton" TabIndex="5" VerticalAlignment="Top" Width="126" Click="_ClickInsertTextButton" />
+    </Grid>
+</Window>

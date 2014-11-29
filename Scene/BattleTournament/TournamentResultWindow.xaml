@@ -1,0 +1,16 @@
+﻿<Window x:Class="FightingCommunityAdministrator.TournamentResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="勝利チームの確定ウィンドウ" Height="153" Width="231" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="168*" />
+            <ColumnDefinition Width="41*" />
+        </Grid.ColumnDefinitions>
+        <Button Content="決定" Height="23" HorizontalAlignment="Left" IsDefault="True" Margin="3,0,0,3" Name="DecideButton" TabIndex="0" VerticalAlignment="Bottom" Width="100" />
+        <Button Click="_ClickButton" Content="キャンセル" Grid.ColumnSpan="2" Height="23" HorizontalAlignment="Right" IsCancel="True" Margin="0,0,3,3" Name="CancelButton" TabIndex="1" VerticalAlignment="Bottom" Width="100" />
+        <Label Content="勝利チームの選択" Height="28" HorizontalAlignment="Left" Margin="3,3,0,0" Name="PointLabel" VerticalAlignment="Top" />
+        <RadioButton Content="RadioButton" Height="16" HorizontalAlignment="Left" Margin="10,35,0,0" Name="UpLeafRadioButton" VerticalAlignment="Top" IsEnabled="True" IsChecked="True" />
+        <RadioButton Content="RadioButton" Height="16" HorizontalAlignment="Left" Margin="10,60,0,0" Name="DownLeafRadioButton" VerticalAlignment="Top" />
+    </Grid>
+</Window>

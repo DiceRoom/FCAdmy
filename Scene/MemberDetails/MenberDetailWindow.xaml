@@ -1,0 +1,88 @@
+﻿<Window x:Class="FightingCommunityAdministrator.MenberDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="の詳細" Height="500" Width="600" WindowStyle="ThreeDBorderWindow" ResizeMode="CanResize" WindowStartupLocation="CenterScreen" MinWidth="600">
+    <!-- スタイル設定 -->
+    <Window.Resources>
+        <Style x:Key="HeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="CellStyle" TargetType="{x:Type DataGridCell}">
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#96FFFF55" />
+                    <Setter Property="BorderBrush" Value="#00000000" />
+                </Trigger>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="#96FFFF55" />
+                    <Setter Property="BorderBrush" Value="#00000000" />
+                </Trigger>
+            </Style.Triggers>
+
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <EventSetter Event="MouseDoubleClick" Handler="_DoubleClickSimpleDispCell" />
+            
+        </Style>
+
+        <Style x:Key="RowStyle" TargetType="{x:Type DataGridRow}">
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#00000000" />
+                    <Setter Property="BorderBrush" Value="#00000000" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+
+    <Grid OpacityMask="Red">
+        <Image HorizontalAlignment="Stretch" Margin="5,110,5,-73" Name="BackGroundImage" Source="/FightingCommunityAdministrator;component/Resource/背景.png" Stretch="Fill" VerticalAlignment="Stretch" />
+        <Rectangle Height="68" HorizontalAlignment="Left" Margin="8,8,0,0" Name="IconBackground" Stroke="#CDAD0000" VerticalAlignment="Top" Width="68" Fill="Black" />
+        <TextBlock FontSize="18" Height="23" HorizontalAlignment="Left" Margin="90,53,0,0" Name="MemberNameShadowTextBlock" Text="メンバー名を適当に入るようにしときます" VerticalAlignment="Top" Width="344" FontWeight="Bold" Foreground="#FF6C6C6C" OpacityMask="#A4000000" />
+        <Image Height="64" HorizontalAlignment="Left" Margin="10,10,0,0" Name="CharacterIcon" Stretch="Fill" VerticalAlignment="Top" Width="64" OpacityMask="{x:Null}" />
+        <TextBlock Height="22" HorizontalAlignment="Left" Margin="90,10,0,0" Name="RegistTextBlock" Text="登録番号No.000" VerticalAlignment="Top" Width="118" FontSize="14" FontWeight="Bold" FontStyle="Normal" TextDecorations="Underline" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="88,50,0,0" Name="MemberNameTextBlock" Text="メンバー名を適当に入るようにしときます" VerticalAlignment="Top" Width="344" FontSize="18" FontWeight="Bold" Foreground="Black" />
+        <TextBlock Height="15" HorizontalAlignment="Left" Margin="90,33,0,0" Name="RegistDateTextBlock" Text="登録日時 YYYY/MM/DD HH:MM:SS" VerticalAlignment="Top" Width="319" />
+        <TabControl HorizontalAlignment="Stretch" Margin="2,82,0,0" Name="BattleResultTabControl" VerticalAlignment="Stretch" Background="{x:Null}">
+            <TabItem Header="全て" Name="TotalItem" BorderBrush="#68000000">
+                <Grid>
+                    <DataGrid AlternatingRowBackground="#55555555" AutoGenerateColumns="False" Background="#A0000000" CanUserResizeRows="False" CellStyle="{StaticResource CellStyle}" ColumnHeaderStyle="{StaticResource HeaderStyle}" GridLinesVisibility="Vertical" HorizontalAlignment="Stretch" HorizontalGridLinesBrush="White" IsReadOnly="True" Name="BattleGridView" Opacity="1" RowBackground="#55000000" RowStyle="{StaticResource RowStyle}" SelectionMode="Single" VerticalAlignment="Stretch" VerticalGridLinesBrush="White" Margin="0,0,0,-5">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding BattleID}" CanUserReorder="True" CanUserSort="True" Foreground="White" Header="No" IsReadOnly="True" Width="30" />
+                            <DataGridTemplateColumn CanUserResize="False" Header="キャラ" IsReadOnly="True" MinWidth="40" SortMemberPath="UseCharacterID">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Height="32" Margin="4,4,4,4" Source="{Binding Icon}" Width="32" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Binding="{Binding Name}" CanUserReorder="True" CanUserSort="True" Foreground="White" Header="大会名" IsReadOnly="True" Width="347" />
+                            <DataGridTextColumn Binding="{Binding BattleDate}" Foreground="White" Header="開催日時" IsReadOnly="True" Width="120" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="シンプルトーナメント" Name="SimpleTournamentItem">
+                <Grid>
+                    <ScrollViewer HorizontalAlignment="Stretch" Name="SimpleTournamentScrollViewer" VerticalAlignment="Stretch" Background="#A0000000" Height="350" Margin="0,0,0,-5">
+                        <StackPanel Name="SimpleTournamentStackPanel" Margin="0,0,0,5" />
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

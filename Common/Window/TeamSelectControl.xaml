@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="FightingCommunityAdministrator.TeamSelectControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="794" Height="572" MouseMove="_MouseMove" MouseLeave="_MouseLeaveControl" PreviewMouseLeftButtonUp="_ReleaseMouseLeftButton">
+    <Grid Background="#DC000000" Name="MainGrid">
+        <ScrollViewer HorizontalAlignment="Left" Margin="0,33,0,23" Name="MemberScrollViewer" VerticalAlignment="Stretch" Width="208" MouseEnter="_MouseEnterMemberStackPanel" TabIndex="0">
+            <WrapPanel Name="MemberWrapPanel" />
+        </ScrollViewer>
+        <ScrollViewer Name="TeamScrollViewer" Width="586" HorizontalAlignment="Right" Margin="0,33,0,23">
+            <WrapPanel Name="TeamWrapPanel"></WrapPanel>
+        </ScrollViewer>
+        <Button Content="新しいチームを作成" Name="AddTeamButton" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="586" Click="_ClickNewTeamButton" />
+        <Button Content="戻る" Height="23" Name="BackButton" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="208" IsCancel="True" Click="_ClickReturnBackButton" />
+        <Image Height="32" HorizontalAlignment="Left" Name="MemberHeaderImage" Stretch="Fill" VerticalAlignment="Top" Width="32" />
+        <TextBlock FontFamily="Magneto" FontSize="22" FontStyle="Italic" Foreground="#FF085608" Height="23" HorizontalAlignment="Left" Margin="43,6,0,0" Name="MemberShadowHeaderTextBlock" Text="MemberList" VerticalAlignment="Top" Width="110" />
+        <TextBlock FontFamily="Magneto" FontSize="22" FontStyle="Italic" Foreground="#FF21BA21" Height="23" HorizontalAlignment="Left" Margin="39,4,0,0" Name="MemberHeaderTextBlock" Text="MemberList" VerticalAlignment="Top" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="FightingCommunityAdministrator.BattleMainScene"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="794" Height="572" Name="参加形式選択画面" xmlns:my="clr-namespace:FightingCommunityAdministrator">
+    <Grid>
+        <Button Content="大会履歴" Height="55" Name="BattleHistoryButton" Width="437" Margin="282,0,75,5" PreviewMouseLeftButtonDown="_ClickButton" TabIndex="3" IsEnabled="False" VerticalAlignment="Bottom" />
+        <Grid Height="320" HorizontalAlignment="Center" Name="grid1" VerticalAlignment="Center" Width="580" Margin="107,113,107,139">
+            <Grid.Background>
+                <ImageBrush ImageSource="/FightingCommunityAdministrator;component/Resource/メインフレーム.png" />
+            </Grid.Background>
+            <Button Content="シングル戦" Height="49" Name="SingleBattleButton" Width="437" HorizontalAlignment="Center" VerticalAlignment="Top" TabIndex="0" Margin="72,45,72,0" Click="_ClickButton" />
+            <Button Content="チーム戦" Height="49" Name="TeamBattleButton" Width="437" HorizontalAlignment="Center" VerticalAlignment="Center" TabIndex="1" Click="_ClickButton" />
+            <Button Content="紅白戦" Height="49" Name="IntrasquadBattleButton" Width="437" HorizontalAlignment="Center" VerticalAlignment="Bottom" PreviewMouseLeftButtonDown="_ClickButton" TabIndex="2" IsEnabled="False" Margin="72,0,72,45" />
+        </Grid>
+        <Label Content="参加メンバーの形式選択してください" Name="label1" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" Width="644" Margin="75,36,75,0">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF26A700" Offset="0" />
+                    <GradientStop Color="#FFC8FFBE" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Button Content="戻る" Height="55" HorizontalAlignment="Left" Margin="70,512,0,0" Name="ReturnBackButton" VerticalAlignment="Top" Width="181" Click="_ClickButton" />
+    </Grid>
+</UserControl>

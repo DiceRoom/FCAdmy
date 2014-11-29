@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="FightingCommunityAdministrator.MemberAddControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="58" d:DesignWidth="494" Width="450" Height="58" xmlns:my="clr-namespace:FightingCommunityAdministrator">
+    <Grid>
+        <Button Content="メンバーの追加" Height="23" HorizontalAlignment="Center" Name="AddButton" VerticalAlignment="Center" Width="200" Margin="125,27,125,7" />
+    </Grid>
+</UserControl>

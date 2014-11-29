@@ -1,0 +1,15 @@
+﻿<Window x:Class="FightingCommunityAdministrator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ＦＣあどみぃ！" Height="600" Width="800" Name="MainWindows" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="_Loaded">
+    <Grid Name="MainGrid">
+        <ContentControl Name="ContentControl" Panel.ZIndex="100"></ContentControl>
+        <Image Name="BackGroundImage" Stretch="Fill" StretchDirection="Both" Source="/FightingCommunityAdministrator;component/Resource/背景.png" />
+        <Image Name="LeftFilterImage" Stretch="Fill" Width="397" HorizontalAlignment="Left" Margin="-397,0,0,0" Source="/FightingCommunityAdministrator;component/Resource/画面フィルター%28左%29.png" Panel.ZIndex="1000" />
+        <Image HorizontalAlignment="Right" Name="RightFilterImage" Stretch="Fill" Width="397" Margin="0,0,-397,0" Source="/FightingCommunityAdministrator;component/Resource/画面フィルター%28右%29.png" Panel.ZIndex="1000" />
+        <ContentControl Name="LoadContent" Panel.ZIndex="10000" />
+        <ScrollViewer Height="100" HorizontalAlignment="Left" Name="ScreenShotScrollViewer" VerticalAlignment="Top" Width="100" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+            <Grid Height="100" Name="ScreenShotGrid" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        </ScrollViewer>
+    </Grid>
+</Window>

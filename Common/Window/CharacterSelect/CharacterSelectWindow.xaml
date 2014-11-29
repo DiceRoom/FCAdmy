@@ -1,0 +1,16 @@
+﻿<Window x:Class="FightingCommunityAdministrator.CharacterSelectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="キャラクター選択ウィンドウ" Height="600" Width="350" MinWidth="50">
+    <Grid>
+        <Grid Background="{x:Null}" HorizontalAlignment="Left" Name="SelectCharacterGrid" VerticalAlignment="Stretch">
+            <ScrollViewer HorizontalAlignment="Stretch" Margin="22" Name="SelectCharacterScrollViewer" VerticalAlignment="Stretch" VerticalScrollBarVisibility="Hidden">
+                <StackPanel Background="#A0000000" Name="SelectCharacterStackPanel" VerticalAlignment="Stretch" />
+            </ScrollViewer>
+            <Image Height="22" HorizontalAlignment="Left" Name="UpFrameImage" Source="/FightingCommunityAdministrator;component/Resource/メンバーフレーム%28上%29.png" Stretch="Fill" VerticalAlignment="Top" />
+            <Image Height="22" HorizontalAlignment="Left" Name="DownFrameImage" Source="/FightingCommunityAdministrator;component/Resource/メンバーフレーム%28下%29.png" Stretch="Fill" VerticalAlignment="Bottom" />
+            <Image HorizontalAlignment="Left" Margin="0,22" Name="LeftFrameImage" Source="/FightingCommunityAdministrator;component/Resource/メンバーフレーム%28左%29.png" Stretch="Fill" VerticalAlignment="Stretch" Width="22" />
+            <Image HorizontalAlignment="Right" Margin="0,22" Name="RightFrameImage" Source="/FightingCommunityAdministrator;component/Resource/メンバーフレーム%28右%29.png" Stretch="Fill" VerticalAlignment="Stretch" Width="22" />
+        </Grid>
+    </Grid>
+</Window>

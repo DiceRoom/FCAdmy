@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="FightingCommunityAdministrator.TeamDisplayMember"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="58" d:DesignWidth="494" Width="280" Height="58" xmlns:my="clr-namespace:FightingCommunityAdministrator" Background="#CD000000" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <Grid Name="MainGrid">
+        <TextBlock FontSize="13" FontStyle="Normal" FontWeight="Bold" Foreground="White" HorizontalAlignment="Right" Text="プレイヤー名（最大１４文字）" TextAlignment="Center" VerticalAlignment="Center" Name="MemberNameTextBlock" Width="171" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}" TextTrimming="CharacterEllipsis" Margin="0,19"><TextBlock.Effect><DropShadowEffect BlurRadius="7" Color="Black" Direction="330" Opacity="0.5" ShadowDepth="4" /></TextBlock.Effect></TextBlock>
+        <TextBlock FontSize="14" FontStyle="Normal" FontWeight="Bold" Foreground="#FFFFFF3E" HorizontalAlignment="Left" Text="No.01" TextAlignment="Center" VerticalAlignment="Center" Name="MemberNoTextBlock" TextDecorations="Underline" Margin="5,20,0,20">
+            <TextBlock.Effect>
+                <DropShadowEffect BlurRadius="7" Color="Black" Direction="330" Opacity="0.5" ShadowDepth="4" />
+            </TextBlock.Effect>
+        </TextBlock>
+        <Image Height="48" HorizontalAlignment="Left" Margin="55,5,0,0" Name="UseCharacterImage" Stretch="Fill" VerticalAlignment="Top" Width="48" />
+    </Grid>
+</UserControl>

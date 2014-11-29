@@ -1,0 +1,8 @@
+﻿<Window x:Class="FightingCommunityAdministrator.TwitterSettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="認証画面" Height="600" Width="800">
+    <Grid>
+        <WebBrowser HorizontalAlignment="Stretch" Name="TwitterWebBrowser" VerticalAlignment="Stretch" LoadCompleted="_DocumentLoadCompleted" />
+    </Grid>
+</Window>

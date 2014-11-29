@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="FightingCommunityAdministrator.TournamentWaitControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="447" Height="78">
+    <Grid Name="MainGrid">
+        <Image Height="48" HorizontalAlignment="Left" Name="UpLeafImage" Stretch="Fill" VerticalAlignment="Top" Width="48" Margin="3,27,0,0" />
+        <Image Height="48" HorizontalAlignment="Right" Name="DownLeafImage" Stretch="Fill" VerticalAlignment="Top" Width="48" Margin="0,27,3,0" />
+        <TextBlock FontSize="13" FontStyle="Normal" FontWeight="Bold" Foreground="White" Name="UpNameTextBlock" Text="左側に表示する表示名" TextAlignment="Left" VerticalAlignment="Center" TextTrimming="WordEllipsis" Margin="60,43,0,15" HorizontalAlignment="Left" Width="152"><TextBlock.Effect><DropShadowEffect BlurRadius="7" Color="Black" Direction="240" Opacity="0.5" ShadowDepth="4" /></TextBlock.Effect></TextBlock>
+        <TextBlock FontSize="13" FontStyle="Normal" FontWeight="Bold" Foreground="White" HorizontalAlignment="Right" Name="DownNameTextBlock" Text="右側に表示する表示名" TextAlignment="Right" TextTrimming="WordEllipsis" VerticalAlignment="Center" Width="152" Margin="0,43,60,15"><TextBlock.Effect><DropShadowEffect BlurRadius="7" Color="Black" Direction="330" Opacity="0.5" ShadowDepth="4" /></TextBlock.Effect></TextBlock>
+        <TextBlock FontSize="13" FontStyle="Normal" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="3,3,0,0" Name="WaitNoTextBlock" Text="対戦待機No.0" TextAlignment="Left" TextTrimming="WordEllipsis" VerticalAlignment="Top"  TextDecorations="Underline" ><TextBlock.Effect><DropShadowEffect BlurRadius="7" Color="Black" Direction="240" Opacity="0.5" ShadowDepth="4" /></TextBlock.Effect></TextBlock>
+        <Grid HorizontalAlignment="Center" Name="grid1" VerticalAlignment="Stretch" Width="100">
+            <TextBlock FontSize="22" FontStyle="Normal" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" Text="VS" TextAlignment="Center" VerticalAlignment="Center" Name="VSTextBlock" Width="39" Margin="30,43,30,3"><TextBlock.Effect><DropShadowEffect BlurRadius="7" Color="Black" Direction="270" Opacity="0.5" ShadowDepth="4" /></TextBlock.Effect></TextBlock>
+            <TextBlock FontSize="18" FontStyle="Normal" FontWeight="Bold" Foreground="#FFFF6F6F" Height="22" HorizontalAlignment="Center" Name="RoundTextBlock" Text="第〇回戦" TextAlignment="Center" TextDecorations="Underline" TextTrimming="WordEllipsis" VerticalAlignment="Top" Margin="10,13,10,0"><TextBlock.Effect><DropShadowEffect BlurRadius="7" Color="Black" Direction="240" Opacity="0.5" ShadowDepth="4" /></TextBlock.Effect></TextBlock>
+        </Grid>
+        <Rectangle Fill="#96FFFF55" Name="FilterRectangle" Stroke="Black" VerticalAlignment="Stretch" />
+    </Grid>
+</UserControl>

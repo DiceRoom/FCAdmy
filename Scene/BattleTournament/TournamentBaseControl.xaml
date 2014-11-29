@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="FightingCommunityAdministrator.TournamentBaseControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="794" Height="572" xmlns:my="clr-namespace:FightingCommunityAdministrator" PreviewMouseWheel="_RollMouseWheel" HorizontalAlignment="Left" VerticalAlignment="Top" IsVisibleChanged="_IsVisibleChanged">
+    <Grid Name="MainGrid" Background="#64000000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <ScrollViewer HorizontalAlignment="Stretch" Name="ContentScrollViewer" VerticalAlignment="Bottom" Height="549" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" ScrollChanged="_ScrollChanged">
+            <Grid Name="ScaleGrid" PreviewMouseLeftButtonDown="_ClickScrollContent" MouseMove="_MouseMove" PreviewMouseLeftButtonUp="_ReleaseMouseLeftButton" MouseLeave="_MouseLeaveControl">
+
+            </Grid>
+        </ScrollViewer>
+        <Menu Height="23" HorizontalAlignment="Left" Name="TournamentMenu" VerticalAlignment="Top" Width="794">
+            <MenuItem Header="スクリーンショット">
+                <MenuItem Header="チームリスト" Name="TeamListItem" />
+                <MenuItem Header="トーナメント表" Name="TournamentItem" />
+            </MenuItem>
+            <MenuItem Header="表示" Name="DisplayItem">
+                <MenuItem Header="対戦オプション画面" IsChecked="True" Name="BattleOptionItem" />
+                <MenuItem Header="スクロールバー表示" IsChecked="False" Name="ScrollbarItem" />
+            </MenuItem>
+        </Menu>
+        <Rectangle Fill="Black" Height="19" HorizontalAlignment="Right" Name="MaskFilter" VerticalAlignment="Top" Width="44" MouseLeave="_MouseLeaveControl" MouseMove="_MouseMove" PreviewMouseLeftButtonDown="_ClickScrollContent" PreviewMouseLeftButtonUp="_ReleaseMouseLeftButton" />
+    </Grid>
+</UserControl>

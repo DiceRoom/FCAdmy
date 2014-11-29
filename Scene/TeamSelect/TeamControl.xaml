@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="FightingCommunityAdministrator.TeamControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="54" d:DesignWidth="494" Width="316" xmlns:my="clr-namespace:FightingCommunityAdministrator" Background="#CD000000" Height="54">
+    <Grid Name="MainGrid">
+        <TextBlock FontSize="15" FontStyle="Normal" FontWeight="Bold" HorizontalAlignment="Left" Text="チーム名（最大１５文字迄です）" TextAlignment="Center" VerticalAlignment="Top" Margin="32,27,0,0" Name="TeamNameTextBlock" Height="27" Width="242" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Text}" TextTrimming="CharacterEllipsis"><TextBlock.Effect><DropShadowEffect BlurRadius="8" Color="Black" Direction="330" Opacity="0.8" ShadowDepth="6" /></TextBlock.Effect><TextBlock.Foreground><LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0"><GradientStop Color="#FFCDFF93" Offset="0" /><GradientStop Color="#FF5CC700" Offset="0.995" /></LinearGradientBrush></TextBlock.Foreground></TextBlock>
+        <TextBlock FontSize="12" FontStyle="Normal" FontWeight="Normal" Foreground="White" HorizontalAlignment="Left" Text="No.01" TextAlignment="Center" VerticalAlignment="Top" Name="TeamNoTextBlock" TextDecorations="Underline" Margin="30,3,0,0">
+            <TextBlock.Effect>
+                <DropShadowEffect BlurRadius="7" Color="Black" Direction="330" Opacity="0.5" ShadowDepth="4" />
+            </TextBlock.Effect>
+        </TextBlock>
+        <Button Content="▼" Height="48" HorizontalAlignment="Left" Margin="3,3,0,0" Name="OpenCloseButton" VerticalAlignment="Top" Width="23" />
+        <Button Content="編集" Height="23" Name="EditButton" VerticalAlignment="Top" Width="44" HorizontalAlignment="Right" Margin="0,3,3,0" />
+        <Button Height="23" Margin="0,28,3,0" Name="RemoveButton" VerticalAlignment="Top" Width="44" Content="削除" HorizontalAlignment="Right" />
+        <StackPanel Height="1" HorizontalAlignment="Left" Margin="0,54,0,0" Name="MemberStackPanel" VerticalAlignment="Top" Width="316" />
+        <Rectangle HorizontalAlignment="Stretch" Name="FilterRectangle" Stroke="Black" VerticalAlignment="Stretch" Fill="#96FFFF55" />
+        <TextBlock FontSize="12" FontStyle="Normal" FontWeight="Normal" Foreground="White" HorizontalAlignment="Left" Margin="74,4,0,0" Name="MemberValTextBlock" Text="このチームには0人所属しています" TextAlignment="Center" VerticalAlignment="Top" FontFamily="Meiryo"><TextBlock.Effect><DropShadowEffect BlurRadius="7" Color="Black" Direction="330" Opacity="0.5" ShadowDepth="4" /></TextBlock.Effect></TextBlock>
+    </Grid>
+</UserControl>

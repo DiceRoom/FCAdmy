@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="FightingCommunityAdministrator.TournamentBattleControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="794" Height="572" xmlns:my="clr-namespace:FightingCommunityAdministrator">
+    <Grid Name="MainGrid">
+        <Image HorizontalAlignment="Stretch" Name="TeamDisplayControl" Stretch="Fill" VerticalAlignment="Stretch" />
+        <my:TournamentLabelControl Height="50" HorizontalAlignment="Left" x:Name="WinnerLeafLabel" VerticalAlignment="Top" Width="200" MouseEnter="_MouseEnterWinnerLabel" MouseLeave="_MouseLeaveWinnerLabel" PreviewMouseLeftButtonDown="_MouseClickWinnerLabel" />
+    </Grid>
+</UserControl>

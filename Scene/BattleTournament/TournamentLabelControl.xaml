@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="FightingCommunityAdministrator.TournamentLabelControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="62" d:DesignWidth="260" xmlns:my="clr-namespace:FightingCommunityAdministrator" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="200">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/FightingCommunityAdministrator;component/Resource/参加ラベル.png" />
+        </Grid.Background>
+        <TextBlock FontSize="12" FontStyle="Normal" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Right" Margin="0,0,21,0" Text="最大１５文字までのはず？？？？" TextAlignment="Center" VerticalAlignment="Center" Width="149" TextTrimming="CharacterEllipsis" Name="TopTextBlock"><TextBlock.Effect><DropShadowEffect BlurRadius="7" Color="Black" Direction="330" Opacity="0.5" ShadowDepth="4" /></TextBlock.Effect></TextBlock>
+        <Image Height="24" HorizontalAlignment="Left" Name="TopCharacterImage" Stretch="Fill" VerticalAlignment="Center" Width="24" Margin="3,13,0,13" />
+        <Rectangle Fill="#7DD1D100" HorizontalAlignment="Stretch" Name="SelectFilter" Stroke="Black" StrokeDashCap="Square" VerticalAlignment="Stretch" />
+    </Grid>
+</UserControl>

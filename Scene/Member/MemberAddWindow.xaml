@@ -1,0 +1,13 @@
+﻿<Window x:Class="FightingCommunityAdministrator.MemberAddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="新規メンバーの追加" Height="152" Width="351" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Content="キャンセル" Height="23" HorizontalAlignment="Right" Name="CancelButton" VerticalAlignment="Bottom" Width="105" TabIndex="1" Click="_ClickButton" IsCancel="True" Margin="0,0,3,3" />
+        <Button Content="追加" Height="23" HorizontalAlignment="Right" Margin="0,0,112,3" Name="AddButton" VerticalAlignment="Bottom" Width="105" TabIndex="0" IsDefault="True" />
+        <Label Content="追加するメンバーの名前を入力してください(14文字まで)" Height="28" HorizontalAlignment="Left" Name="AddLabel" VerticalAlignment="Top" />
+        <TextBox HorizontalAlignment="Stretch" Name="MemberNameTextBox" VerticalAlignment="Stretch" Text="ここに名前を入力してね" Margin="5,25,6,70" Height="22" />
+        <Label Content="デフォルトで使用するキャラクターを選択" Height="28" HorizontalAlignment="Left" Margin="0,47,0,0" Name="label1" VerticalAlignment="Top" />
+        <ComboBox Height="24" HorizontalAlignment="Stretch" Margin="5,69,6,0" Name="CharacterComboBox" VerticalAlignment="Top" />
+    </Grid>
+</Window>
